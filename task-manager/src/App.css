@@ -1,38 +1,175 @@
-.App {
+.auth-page {
+  min-height: 100vh;
+  background: #0f73da;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 560px;
+  background: #f4f4f4;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.24);
+  padding: 40px 44px;
+  box-sizing: border-box;
+}
+
+.auth-card h1 {
+  margin: 0 0 30px;
+  text-align: center;
+  color: #111111;
+  font-size: 50px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.auth-form label {
+  font-size: 16px;
+  color: #8f97a5;
+  font-weight: 700;
+}
+
+.auth-form input[type='text'],
+.auth-form input[type='email'],
+.auth-form input[type='password'] {
+  height: 58px;
+  border: 2px solid #d6d6d6;
+  border-radius: 8px;
+  padding: 0 16px;
+  font-size: 20px;
+  color: #404040;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.auth-form input:focus {
+  border-color: #1d7de2;
+  box-shadow: 0 0 0 2px rgba(29, 125, 226, 0.15);
+}
+
+.checkbox-row {
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  color: #8f97a5;
+  font-weight: 400;
+}
+
+.checkbox-row input {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+}
+
+.auth-form button {
+  margin-top: 10px;
+  height: 64px;
+  border: none;
+  border-radius: 10px;
+  background: #0f73da;
+  color: #ffffff;
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+.auth-form button:hover {
+  background: #0c66c3;
+}
+
+.auth-form button:disabled {
+  background: #6ca6e3;
+  cursor: not-allowed;
+}
+
+.auth-link-row {
+  margin: 22px 0 0;
+  text-align: center;
+  color: #1882e5;
+  font-size: 18px;
+}
+
+.auth-link-row a {
+  color: #1882e5;
+  text-decoration: none;
+}
+
+.text-link {
+  border: none;
+  background: none;
+  color: #1882e5;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.auth-link-row a:hover {
+  text-decoration: underline;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+.form-message {
+  margin: 16px 0 0;
+  text-align: center;
+  font-size: 16px;
+  color: #5f6d80;
+}
+
+.form-message.success {
+  color: #0b8b39;
+}
+
+.form-message.error {
+  color: #c23030;
+}
+
+.success-card {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.success-subtext {
+  color: #5f6d80;
+  font-size: 20px;
+  margin: 8px 0 24px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.success-link {
+  display: inline-block;
+  color: #1882e5;
+  font-size: 22px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.success-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .auth-card {
+    padding: 28px 22px;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .auth-card h1 {
+    font-size: 40px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .auth-form button {
+    font-size: 30px;
   }
 }
