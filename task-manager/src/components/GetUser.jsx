@@ -36,11 +36,12 @@ function GetUser() {
       </button>
 
       {user && (
-        <div style={{ marginTop: "20px" }}>
-          <h3>Name: {user.name}</h3>
-          <p>ID: {user.id}</p>
-        </div>
-      )}
+  <div className="card" style={{ marginTop: "30px" }}>
+    <h3>Name: {user.name}</h3>
+    <p>User ID: {user.id}</p>
+    <p>Role: {user.Role}</p>
+  </div>
+)}
     </div>
   );
 }
